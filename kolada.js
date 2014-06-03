@@ -70,7 +70,7 @@ $(document).ready(function() {
         };
 
         // Begränsa antalet decimaler och använd komma som decimalsymbol
-        var formatter = new google.visualization.NumberFormat({decimalSymbol: ',', fractionDigits: 2});
+        var formatter = new google.visualization.NumberFormat({decimalSymbol: ',', groupingSymbol: '.', fractionDigits: 2});
         formatter.format(chartData, 1);
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div_'+kpi));
