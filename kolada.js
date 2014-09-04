@@ -30,7 +30,8 @@ metrics = [
 // Load Google Charts
 google.load("visualization", "1", {packages:["corechart"]});
 
-$(document).ready(function() {     
+jQuery.noConflict();    
+(function( $ ) {  
   
   // Add all the metrics to the page
   $.each(metrics, function(index, metric){
@@ -81,4 +82,4 @@ $(document).ready(function() {
       }); //getJSON                                    
     }); 
 
-});
+})(jQuery);
